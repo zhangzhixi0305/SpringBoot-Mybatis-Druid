@@ -1,0 +1,30 @@
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/UserMapper.xml
+  type-aliases-package: com.zhixi.pojo
+server:
+  port: 8080
+spring:
+  application:
+    name: springboot04-swagger
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+      filters: stat,wall,log4j
+      initialSize: 5
+      maxActive: 20
+      maxPoolPreparedStatementPerConnectionSize: 20
+      maxWait: 60000
+      minEvictableIdleTimeMillis: 300000
+      minIdle: 5
+      poolPreparedStatements: true
+      testOnBorrow: false
+      testOnReturn: false
+      testWhileIdle: true
+      timeBetweenEvictionRunsMillis: 60000
+      useGlobalDataSourceStat: true
+      validationQuery: SELECT 1 FROM DUAL
+    password: zhixi158
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/mybatis?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    username: root

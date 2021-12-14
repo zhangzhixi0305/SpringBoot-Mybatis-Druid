@@ -1,0 +1,12 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.zhixi.config.DruidConfiguration",
+      "sourceMethod": "druidDataSource()"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
