@@ -60,12 +60,12 @@ public class DruidConfiguration {
         FilterRegistrationBean bean = new FilterRegistrationBean();
         bean.setFilter(new WebStatFilter());
 
-        //exclusions：设置哪些请求进行过滤排除掉，从而不进行统计
+        /*exclusions：设置哪些请求进行过滤排除掉，从而不进行统计*/
         Map<String, String> initParams = new HashMap<>();
         initParams.put("exclusions", "*.js,*.css,/druid/*");
         bean.setInitParameters(initParams);
 
-        //"/*" 表示过滤所有请求
+        /*"/*" 表示过滤所有请求*/
         bean.setUrlPatterns(Arrays.asList("/*"));
         return bean;
     }

@@ -58,7 +58,7 @@ public class UserController {
     }
 
     /**
-     * @return 根据id修改用户
+     * @return 根据id进行修改用户
      */
     @ResponseBody
     @RequestMapping("/updateUser/{id}/{userName}/{userPwd}")
@@ -66,7 +66,7 @@ public class UserController {
                              @PathVariable("userName") String userName,
                              @PathVariable("userPwd") String userPwd) {
         int i = userMapper.updateUser(new User(id, userName, userPwd));
-        return i >= 1 ? "修改成功" : "修改失败";
+        return i >= 1 ? "修改成功！" : "修改失败！";
     }
 
     /**
