@@ -64,4 +64,15 @@ public class MyController {
         // 表单提交成功跳转到主页面
         return "index";
     }
+
+    @RequestMapping("/upload")
+    public String upload() {
+        return "upload";
+    }
+
+    /*请求异常：交给全局异常处理器GlobalExceptionHandling进行处理*/
+    @RequestMapping("/exception")
+    public void testException() {
+        int i = 10/0;
+    }
 }
